@@ -1,0 +1,110 @@
+<?js
+    var data = obj;
+    var self = this;
+
+    function insertAttribs(str) {
+    	if (str && str !== '<span class="type-signature"></span>') {
+            str = trimTags(str).split(', ');
+            var arr = [];
+            for (var i = 0; i < str.length; i++) {
+                var t = str[i];
+                switch(t) {
+                    case 'private':
+                        arr.push('<kbd>'+t+'</kbd>');
+                        break;
+                    case 'constant':
+                        arr.push('<code>'+t+'</code>');
+                        break;
+                    default:
+                        arr.push('<samp>'+t+'</samp>');
+                }
+            }
+    		return arr.join('&nbsp');
+    	}
+    	return '';
+    }
+
+    function getSignature(data) {
+        if (data.signature) {
+            var str = trimTags(data.signature);
+			str = str.replace(/^\s*\:/, '');
+            str = '&nbsp;{'+str+'}';
+            return '<small class="_color-gray50" style="display: inline-block;vertical-align: initial;">'+str+'</small>';
+        }
+        return '';
+    }
+
+    function trimTags(str) {
+        str = str.replace(/\(|\)/g, '');
+        str = str.replace(/ </g, '<');
+        str = str.replace(/<((?!>).)+>/g, '');
+        return str;
+    }
+
+    function insertName(objData, strKind, strName) {
+        var isClass = strKind === 'class';
+        strName = strName.replace(/\:\:/g, '.');
+        strName = strName.replace(/^default/, '<em style="font-weight: normal;">default</em>');
+        if (isClass) {
+            strName = 'new '+strName;
+        }
+        return '<span class="_color-black">'+strName+'</span>';
+    }
+?>
+
+<h4 class="name anchor-header" id="<?js= id ?>" data-text="<?js= this.htmlsafe(name) ?>">
+    <a href="#<?js= id ?>" class="anchor-header__link">#</a>
+	<?js= insertName(data, data.kind, name) + getSignature(data) ?>
+</h4>
+<p class="un-mar is-empty"><?js= insertAttribs(data.attribs) ?></p>
+
+<?js if (data.summary) { ?>
+<blockqoute class="summary">
+	<?js= summary ?>
+</blockqoute>
+<?js } ?>
+
+<?js if (data.description) { ?>
+<div class="description">
+    <?js= data.description ?>
+</div>
+<?js } ?>
+
+
+<?js if (data.inludedIn && data.inludedIn.length) { ?>
+<h5>Used by:</h5>
+<ul><?js data.inludedIn.forEach(function(i) { ?>
+    <li><?js= self.linkto(i, i) ?></li>
+    <?js }); ?></ul>
+<?js } ?>
+
+<table class="table-list"><?js if (data.type && data.type.names) {?>
+    <tr class="table-list__type">
+        <td>Type:</td>
+        <td><?js= self.partial('type.tmpl', data.type.names) ?></td>
+    </tr>
+    <?js } ?></table>
+
+<?js= this.partial('details.tmpl', data) ?>
+
+<table class="table-list"><?js if (data.fires && fires.length) { ?>
+    <tr class="table-list__fires">
+        <td>Fires:</td>
+        <td>
+            <ul>
+                <?js fires.forEach(function(f) { ?>
+                <li><?js= self.linkto(f) ?></li>
+                <?js }); ?>
+            </ul>
+        </td>
+    </tr>
+    <?js } ?></table>
+
+<?js if (data.examples && examples.length) { ?>
+    <h5>Example<?js= examples.length > 1? 's':'' ?></h5>
+    <?js= this.partial('examples.tmpl', examples) ?>
+<?js } ?>
+
+<br>
+<hr>
+<br>

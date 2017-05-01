@@ -1,0 +1,28 @@
+{
+  "name": "jsdoc-simple-theme",
+  "version": "1.0.0",
+  "description": "jsDoc3 Simple Theme",
+  "main": "publish.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dutchenkoOleg/jsdoc-simple-theme.git"
+  },
+  "keywords": [
+    "jsdoc3",
+    "theme"
+  ],
+  "author": "Oleg Dutchenko <dutchenko.o.wezom@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dutchenkoOleg/jsdoc-simple-theme/issues"
+  },
+  "homepage": "https://github.com/dutchenkoOleg/jsdoc-simple-theme#readme",
+  "dependencies": {
+    "jsdoc-export-default-interop": "^0.3.1",
+    "jsdoc-ignore-code": "^1.0.1",
+    "jsdoc-sourcecode-tag": "^1.0.0"
+  }
+}

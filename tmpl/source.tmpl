@@ -1,0 +1,19 @@
+<?js
+    var data = obj;
+    var lines = data.code.split('\n').length;
+    var list = [];
+	for (var i = 1; i <= lines; i++) {
+	    list.push('<li id="line'+i+'">line'+i+'</li>');
+	}
+	list = '<ul class="list-line-anchors">'+list.join('\n')+'</ul>';
+
+?>
+<section>
+    <article class="wysiwyg">
+		<p><em>modified</em>&nbsp;&nbsp;<code><?js= data.mtime ?></code></p>
+		<div class="source">
+			<?js= list ?>
+			<pre class="line-numbers"><code class="language-javascript"><?js= data.code ?></code></pre>
+		</div>
+    </article>
+</section>

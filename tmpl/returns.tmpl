@@ -1,0 +1,14 @@
+<?js
+    var data = obj || {};
+?>
+<table class="table-list"><?js if (data.type && data.type.names) {?>
+    <tr class="table-list__version">
+        <td>Type:</td>
+        <td><?js= this.partial('type.tmpl', data.type.names) ?></td>
+    </tr>
+    <?js } ?><?js if (data.description) {?>
+    <tr class="table-list__version">
+        <td>Description:</td>
+        <td><?js= description ?></td>
+    </tr>
+    <?js } ?></table>
