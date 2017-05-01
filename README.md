@@ -42,7 +42,7 @@ yarn add jsdoc-simple-theme
 
 ## Usage
 
-Add plugin to jsdoc conf.json (http://usejsdoc.org/about-configuring-jsdoc.html)
+Add theme and plugins to jsdoc conf.json (http://usejsdoc.org/about-configuring-jsdoc.html)
 
 - opts > template
 - templates > default > layoutFile
