@@ -70,6 +70,18 @@
 </div>
 <?js } ?>
 
+<?js if (data.kind !== 'module' && data.requires && data.requires.length) { ?>
+<h5>Requires:</h5>
+<ul><?js data.requires.forEach(function(r) { ?>
+    <?js
+        var reqLinkRegExp = /^\{@link\s(\[.+\])(\s|\t)*http/;
+        r = r.replace(reqLinkRegExp, function(str, g1) {
+            return g1 + '{@link http';
+        });
+    ?>
+    <li><?js= self.linkto(r, r) ?></li>
+    <?js }); ?></ul>
+<?js } ?>
 
 <?js if (data.inludedIn && data.inludedIn.length) { ?>
 <h5>Used by:</h5>
@@ -84,8 +96,6 @@
         <td><?js= self.partial('type.tmpl', data.type.names) ?></td>
     </tr>
     <?js } ?></table>
-
-<?js= this.partial('details.tmpl', data) ?>
 
 <table class="table-list"><?js if (data.fires && fires.length) { ?>
     <tr class="table-list__fires">
@@ -104,6 +114,8 @@
     <h5>Example<?js= examples.length > 1? 's':'' ?></h5>
     <?js= this.partial('examples.tmpl', examples) ?>
 <?js } ?>
+
+<?js= this.partial('details.tmpl', data) ?>
 
 <br>
 <hr>

@@ -2,12 +2,13 @@
     var data = obj;
     var self = this;
 
-    data.forEach(function(example) {
+    data.forEach(function(example, i) {
         if (example.caption) {
+            var exNumber = data.length > 1 ? ('<em class="example-number _color-gray50">example '+(i+1)+'.</em> ') : '';
     ?>
-        <p class="code-caption"><?js= example.caption ?></p>
+        <p class="code-caption"><?js= exNumber ?><?js= example.caption ?></p>
     <?js } ?>
-    <pre class="prettyprint"><code><?js= self.htmlsafe(example.code) ?></code></pre>
+    <pre><code class="language-javascript"><?js= self.htmlsafe(example.code) ?></code></pre>
 <?js
     });
 ?>
