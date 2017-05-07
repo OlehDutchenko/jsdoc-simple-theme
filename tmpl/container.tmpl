@@ -21,7 +21,13 @@
 
 <header class="wysiwyg">
     <?js if (!doc.longname || doc.kind !== 'module') { ?>
-        <h2><?js if (doc.ancestors && doc.ancestors.length) { ?>
+        <?js if (doc.name) { ?>
+            <?js var idName = doc.name.replace(/[\/|\\|\.]/g, '_'); ?>
+            <h2 class="anchor-header" id="<?js= idName ?>"><a href="#<?js= idName ?>" class="anchor-header__link">#</a>
+        <?js } else { ?>
+            <h2>
+        <?js } ?>
+        <?js if (doc.ancestors && doc.ancestors.length) { ?>
             <span class="ancestors"><?js= doc.ancestors.join('') ?></span><?js
          } 
         ?><?js= doc.name ?><?js
