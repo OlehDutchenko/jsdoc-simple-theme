@@ -87,3 +87,5 @@ Add theme and plugins to jsdoc conf.json (http://usejsdoc.org/about-configuring-
 
 
 ## Changelog
+
+read [CHANGELOG.md](https://github.com/dutchenkoOleg/jsdoc-simple-theme/blob/master/CHANGELOG.md)

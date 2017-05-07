@@ -5,10 +5,10 @@ var defaultObjectClass = '';
 
 // Check if the default value is an object or array; if so, apply code highlighting
 if (data.defaultvalue && (data.defaultvaluetype === 'object' || data.defaultvaluetype === 'array')) {
-    data.defaultvalue = "<pre class=\"prettyprint\"><code>" + data.defaultvalue + "</code></pre>";
+    data.defaultvalue = "<pre><code class=\"language-javascript\">" + data.defaultvalue + "</code></pre>";
     defaultObjectClass = ' class="object-value"';
 }
-?>
+?> 
 <?js
     var properties = data.properties;
     if (properties && properties.length && properties.forEach) {
@@ -110,15 +110,6 @@ if (data.defaultvalue && (data.defaultvaluetype === 'object' || data.defaultvalu
                 <div<?js= defaultObjectClass ?>><?js= data.defaultvalue ?></div>
             </td>
         </tr>
-    <?js } ?><?js if (data.meta && self.outputSourceFiles) {?>
-        <tr class="table-list__source">
-            <td>Source:</td>
-            <td>
-                <?js= self.linkto(meta.shortpath) ?>,
-                <?js var sourceLine = (data.sourceCode) ? data.sourceCode.lineno : meta.lineno ?>
-                on <?js= self.linkto(meta.shortpath, 'line ' + sourceLine, null, 'line' + sourceLine) ?>
-            </td>
-        </tr>
     <?js } ?><?js if (data.tutorials && tutorials.length) {?>
         <tr class="table-list__tutorials">
             <td>Tutorials:</td>
@@ -150,6 +141,15 @@ if (data.defaultvalue && (data.defaultvaluetype === 'object' || data.defaultvalu
                     <li><?js= t ?></li>
                     <?js }); ?>
                 </ul>
+            </td>
+        </tr>
+    <?js } ?><?js if (data.meta && self.outputSourceFiles) {?>
+        <tr class="table-list__source">
+            <td>Source:</td>
+            <td>
+                <?js= self.linkto(meta.shortpath) ?>,
+                <?js var sourceLine = (data.sourceCode) ? data.sourceCode.lineno : meta.lineno ?>
+                on <?js= self.linkto(meta.shortpath, 'line ' + sourceLine, null, 'line' + sourceLine) ?>
             </td>
         </tr>
     <?js } ?></table>
