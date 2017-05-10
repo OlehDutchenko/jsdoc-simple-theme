@@ -76,6 +76,7 @@
 
     function insertName(objData, strKind, strName) {
         var isClass = strKind === 'class';
+        strName = strName.replace(/(\(\))?[\s\|\t]*$/, '');
         strName = strName.replace(/\:\:/g, '.');
         strName = strName.replace(/^default/, '<em style="font-weight: normal;">default</em>');
         if (data.memberof && !/^module:/.test(data.longname)) {
