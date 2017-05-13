@@ -576,12 +576,12 @@ exports.publish = function(taffyData, opts, tutorials) {
     
 	data().each(function(doclet) {
 		var _name = doclet.name;
-		var _long = doclet.longname;
-		if (includedIn[_name]) {
+		var _long = doclet.longname.replace(/^module\:/, '');
+        if (includedIn[_name]) {
 			doclet.inludedIn = includedIn[_name];
-		} else if (includedIn[_long]) {
-			doclet.inludedIn = includedIn[_long];
-		}
+        } else if (includedIn[_long]) {
+            doclet.inludedIn = includedIn[_long];
+        }
 	});
 
     var members = helper.getMembers(data);
