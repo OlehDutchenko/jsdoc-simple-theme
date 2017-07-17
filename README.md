@@ -3,19 +3,19 @@
 ![jsdoc3 theme](https://img.shields.io/badge/JSDoc3-theme-blue.svg)
 ![license](https://img.shields.io/badge/License-MIT-orange.svg)
 
-Simple theme for [gulp-jsdoc3](https://www.npmjs.com/package/gulp-jsdoc3) and [jsdoc](https://www.npmjs.com/package/jsdoc) also.
+> Simple theme for [gulp-jsdoc3](https://www.npmjs.com/package/gulp-jsdoc3) and [jsdoc](https://www.npmjs.com/package/jsdoc) also.
 
 Less words, better look at these demo screenshots
 
-[![screen-1](https://github.com/dutchenkoOleg/jsdoc-simple-theme/blob/master/assets/screen-1.jpg)](https://github.com/dutchenkoOleg/jsdoc-simple-theme/blob/master/assets/screen-1.jpg)
+[![screen-1](https://raw.githubusercontent.com/dutchenkoOleg/jsdoc-simple-theme/master/assets/screen-1.jpg)](https://raw.githubusercontent.com/dutchenkoOleg/jsdoc-simple-theme/master/assets/screen-1.jpg)
 
-[![screen-2](https://github.com/dutchenkoOleg/jsdoc-simple-theme/blob/master/assets/screen-2.jpg)](https://github.com/dutchenkoOleg/jsdoc-simple-theme/blob/master/assets/screen-2.jpg)
+[![screen-2](https://raw.githubusercontent.com/dutchenkoOleg/jsdoc-simple-theme/master/assets/screen-2.jpg)](https://raw.githubusercontent.com/dutchenkoOleg/jsdoc-simple-theme/master/assets/screen-2.jpg)
 
-[![screen-3](https://github.com/dutchenkoOleg/jsdoc-simple-theme/blob/master/assets/screen-3.jpg)](https://github.com/dutchenkoOleg/jsdoc-simple-theme/blob/master/assets/screen-3.jpg)
+[![screen-3](https://raw.githubusercontent.com/dutchenkoOleg/jsdoc-simple-theme/master/assets/screen-3.jpg)](https://raw.githubusercontent.com/dutchenkoOleg/jsdoc-simple-theme/master/assets/screen-3.jpg)
 
-[![screen-4](https://github.com/dutchenkoOleg/jsdoc-simple-theme/blob/master/assets/screen-4.jpg)](https://github.com/dutchenkoOleg/jsdoc-simple-theme/blob/master/assets/screen-4.jpg)
+[![screen-4](https://raw.githubusercontent.com/dutchenkoOleg/jsdoc-simple-theme/master/assets/screen-4.jpg)](https://raw.githubusercontent.com/dutchenkoOleg/jsdoc-simple-theme/master/assets/screen-4.jpg)
 
-[![screen-5](https://github.com/dutchenkoOleg/jsdoc-simple-theme/blob/master/assets/screen-5.jpg)](https://github.com/dutchenkoOleg/jsdoc-simple-theme/blob/master/assets/screen-5.jpg)
+[![screen-5](https://raw.githubusercontent.com/dutchenkoOleg/jsdoc-simple-theme/master/assets/screen-5.jpg)](https://raw.githubusercontent.com/dutchenkoOleg/jsdoc-simple-theme/master/assets/screen-5.jpg)
 
 
 
