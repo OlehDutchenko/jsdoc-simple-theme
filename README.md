@@ -84,8 +84,24 @@ Add theme and plugins to jsdoc conf.json (http://usejsdoc.org/about-configuring-
 }
 ```
 
-
+---
 
 ## Changelog
 
 read [CHANGELOG.md](https://github.com/dutchenkoOleg/jsdoc-simple-theme/blob/master/CHANGELOG.md)
+
+---
+
+
+## Code of Conduct
+
+Please read [CODE_OF_CONDUCT.md](https://github.com/dutchenkoOleg/jsdoc-simple-theme/blob/master/CODE_OF_CONDUCT.md)
+
+---
+
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://github.com/dutchenkoOleg/jsdoc-simple-theme/blob/master/CONTRIBUTING.md)
+
+After that - you know what to do -> [issues](https://github.com/dutchenkoOleg/jsdoc-simple-theme/issues) and [pulls](https://github.com/dutchenkoOleg/jsdoc-simple-theme/pulls)

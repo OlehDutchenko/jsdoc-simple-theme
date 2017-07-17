@@ -1,6 +1,6 @@
 {
   "name": "jsdoc-simple-theme",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "jsDoc3 simple theme for gulp-jsdoc3 and jsdoc also.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +13,7 @@
     "jsdoc3",
     "theme"
   ],
-  "author": "Oleg Dutchenko <dutchenko.o.wezom@gmail.com>",
+  "author": "Oleg Dutchenko <dutchenko.o.dev@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dutchenkoOleg/jsdoc-simple-theme/issues"
@@ -22,6 +22,6 @@
   "dependencies": {
     "jsdoc-export-default-interop": "^0.3.1",
     "jsdoc-ignore-code": "^1.0.1",
-    "jsdoc-sourcecode-tag": "^1.0.0"
+    "jsdoc-sourcecode-tag": "^1.0.1"
   }
 }
