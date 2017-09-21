@@ -45,6 +45,9 @@
         var isClass = strKind === 'class';
         strName = strName.replace(/\:\:/g, '.');
         strName = strName.replace(/^default/, '<em style="font-weight: normal;">default</em>');
+        if (data.memberof && !/^module:/.test(data.longname)) {
+             strName = '<span class="_color-gray50">'+data.memberof+'.</span>'+strName;
+        }
         if (isClass) {
             strName = 'new '+strName;
         }
