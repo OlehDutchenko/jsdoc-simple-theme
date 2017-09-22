@@ -7,6 +7,12 @@
 
 ---
 
+### [1.2.0] - 2017-09-22
+
+Change information blocks order
+
+---
+
 ### [1.1.0] - 2017-07-17
 
 #### Bump

@@ -104,12 +104,6 @@
     <?js } ?>
 <?js } ?>
 
-<?js if (data.kind !== 'module' && data.description) { ?>
-<div class="description">
-    <?js= data.description ?>
-</div>
-<?js } ?>
-
 <?js if (data.augments && data.alias && data.alias.indexOf('module:') === 0) { ?>
     <h5>Extends:</h5>
     <?js= self.partial('augments.tmpl', data) ?>
@@ -132,6 +126,14 @@
 <?js if (data.params && params.length) { ?>
     <h5>Parameters:</h5>
     <?js= this.partial('params.tmpl', params) ?>
+<?js } ?>
+
+
+<?js if (data.kind !== 'module' && data.description) { ?>
+<h5>Description</h5>
+<div class="description">
+    <?js= data.description ?>
+</div>
 <?js } ?>
 
 <?js if (data.kind !== 'module' && data.requires && data.requires.length) { ?>
