@@ -100,7 +100,9 @@
     <p class="un-mar is-empty"><?js= insertAttribs(data.attribs) ?></p>
 
     <?js if (data.summary) { ?>
-    <p class="summary"><?js= summary ?></p>
+    <blockqoute class="summary">
+        <?js= summary ?>
+    </blockqoute>
     <?js } ?>
 <?js } ?>
 
@@ -128,14 +130,6 @@
     <?js= this.partial('params.tmpl', params) ?>
 <?js } ?>
 
-
-<?js if (data.kind !== 'module' && data.description) { ?>
-<h5>Description</h5>
-<div class="description">
-    <?js= data.description ?>
-</div>
-<?js } ?>
-
 <?js if (data.kind !== 'module' && data.requires && data.requires.length) { ?>
 <h5>Requires:</h5>
 <ul><?js data.requires.forEach(function(r) { ?>
@@ -144,8 +138,13 @@
         r = r.replace(reqLinkRegExp, function(str, g1) {
             return g1 + '{@link http';
         });
+        var r_link = self.linkto(r, r);
+        if (r_link === r) {
+            var r_val = r.replace(/^module:/, '');
+            r_link = self.linkto(r_val, r_val);
+        }
     ?>
-    <li><?js= self.linkto(r, r) ?></li>
+    <li><?js= r_link ?></li>
     <?js }); ?></ul>
 <?js } ?>
 <?js if (data.kind !== 'module' && data.inludedIn && data.inludedIn.length) { ?>
@@ -199,6 +198,13 @@
         <?js= self.partial('returns.tmpl', r) ?>
     <?js });
 } } ?>
+
+<?js if (data.kind !== 'module' && data.description) { ?>
+<h5><em>Description</em></h5>
+<div class="description">
+    <?js= data.description ?>
+</div>
+<?js } ?>
 
 <?js if (data.examples && examples.length) { ?>
     <h5>Example<?js= examples.length > 1? 's':'' ?></h5>
