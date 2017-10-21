@@ -7,6 +7,12 @@
 
 ---
 
+### [1.2.1] - 2017-10-21
+
+Fix clipboard.js
+
+---
+
 ### [1.2.0] - 2017-09-22
 
 Change information blocks order
