@@ -7,6 +7,12 @@
 
 ---
 
+### [1.2.4] - 2017-11-01
+
+Add [prism-ejs-language](https://github.com/dutchenkoOleg/prism-ejs-language)
+
+---
+
 ### [1.2.1] - 2017-10-21
 
 Fix clipboard.js

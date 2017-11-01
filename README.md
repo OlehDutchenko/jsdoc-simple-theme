@@ -37,8 +37,9 @@ yarn add jsdoc-simple-theme
 
 [prismjs](http://prismjs.com/)
 
-- all languages - http://prismjs.com/index.html#languages-list
+- all languages - (http://prismjs.com/index.html#languages-list)
 - all plugins (http://prismjs.com/index.html#plugins), except _WebPlatform Docs_ and _Show Invisibles_
+- prism-ejs-language - (https://github.com/dutchenkoOleg/prism-ejs-language)
 
 ## Usage
 

@@ -1,6 +1,6 @@
 {
   "name": "jsdoc-simple-theme",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "description": "jsDoc3 simple theme for gulp-jsdoc3 and jsdoc also.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,6 +22,6 @@
   "dependencies": {
     "jsdoc-export-default-interop": "^0.3.1",
     "jsdoc-ignore-code": "^1.0.1",
-    "jsdoc-sourcecode-tag": "^1.0.1"
+    "jsdoc-sourcecode-tag": "^1.0.2"
   }
 }
