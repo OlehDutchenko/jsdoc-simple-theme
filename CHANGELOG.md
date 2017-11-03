@@ -7,10 +7,11 @@
 
 ---
 
-### [1.2.5] - 2017-11-03
+### [1.2.6] - 2017-11-03
 
 - Fix tutorial.tmpl
 - Fix tables in content
+- Fix styles
 
 ---
 
