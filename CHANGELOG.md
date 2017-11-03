@@ -7,6 +7,13 @@
 
 ---
 
+### [1.2.5] - 2017-11-03
+
+- Fix tutorial.tmpl
+- Fix tables in content
+
+---
+
 ### [1.2.4] - 2017-11-01
 
 Add [prism-ejs-language](https://github.com/dutchenkoOleg/prism-ejs-language)

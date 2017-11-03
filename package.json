@@ -1,6 +1,6 @@
 {
   "name": "jsdoc-simple-theme",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "jsDoc3 simple theme for gulp-jsdoc3 and jsdoc also.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

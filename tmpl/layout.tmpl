@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/jsdoc-prism.css">
     <link rel="stylesheet" href="styles/jsdoc-utils.css">
     <link rel="stylesheet" href="styles/jsdoc-style.css">
+    <link rel="stylesheet" href="styles/inner-scroll.css">
 </head>
 
 <body>
@@ -58,6 +59,7 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdn.rawgit.com/leafo/sticky-kit/v1.1.2/jquery.sticky-kit.min.js"></script>
+    <script src="scripts/inner-scroll.js"></script>
     <script>
 	    jQuery(document).ready(function ($) {
 
@@ -120,9 +122,12 @@
 		    $(".js-sidebar").each(function() {
 			    $(this).stick_in_parent();
 		    });
+
+            $.innerScroll('.wysiwyg table');
         });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.8/clipboard.min.js"></script>
+    <script src="https://unpkg.com/custom-jquery-methods@latest/dist/index.min.js"></script>
     <script src="scripts/jsdoc-prism.js"></script>
     <script src="https://unpkg.com/prism-ejs-language@latest/prism-ejs-language.js"></script>
 </body>
